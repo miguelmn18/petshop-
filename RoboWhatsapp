@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class RoboWhatsapp {
+    private static ArrayList<String> inventario = new ArrayList<>();
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        boolean lojaAberta = true;
+        while (lojaAberta) {
+            System.out.println("Olá! Como posso ajudá-lo hoje?");
+            System.out.println("Por favor, digite o seu pedido ou digite 'sair' para fechar a loja:");
+
+            String pedido = sc.nextLine();
+
+            if (pedido.equalsIgnoreCase("sair")) {
+                lojaAberta = false;
+            } else {
+                inventario.add(pedido);
+                System.out.println("Pedido recebido! Obrigado por escolher nosso Petshop.");
+            }
+        }
+
+        System.out.println("Fechando a loja... Imprimindo inventário do dia:");
+        imprimirInventario();
+    }
+
+    private static void imprimirInventario() {
+        System.out.println("Inventário do dia:");
+        for (int i = 0; i < inventario.size(); i++) {
+            System.out.println((i + 1) + ". " + inventario.get(i));
+        }
+    }
+}
