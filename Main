@@ -1,0 +1,98 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Seja bem vindo ao nosso Petshop");
+        System.out.println("Qual o serviço que voce deseja realizar?");
+        System.out.println("1-Para dar banho no seu pet");
+        System.out.println("2-Para tosar o seu pet");
+        System.out.println("3-Para deixar seu pet no hotelzinho");
+        int tipoServico = sc.nextInt();
+
+        if (tipoServico == 1 ) {
+            switch (tipoServico) {
+                case 1:
+                    System.out.println("Qual é o tamanho do seu animal? ");
+                    String tamanhoAnimal = sc.nextLine();
+                    if (tamanhoAnimal.equalsIgnoreCase("p")) {
+                        System.out.println("Qual o tamanho do pelo do seu animal? ");
+                        String tamanhoPeloAnimal = sc.nextLine();
+                        if (tamanhoAnimal.equalsIgnoreCase("curto")) {
+                            System.out.println("O custo total do banho é 20 reais.");
+
+                        } else if (tamanhoPeloAnimal.equalsIgnoreCase("médio")) {
+                            System.out.println("O custo total do banho é 30 reais.");
+                        } else {
+                            System.out.println("O custo total do banho é 40 reais.");
+                        }
+                        break;
+
+                    }
+                case 2:
+                    System.out.println("Qual é o tamanho do seu animal? ");
+                    String tamanhoAnimal2 = sc.nextLine();
+                    if (tamanhoAnimal2.equalsIgnoreCase("m")) {
+                        System.out.println("Qual o tamanho do pelo do seu animal? ");
+                        String tamanhoPeloAnimal3 = sc.nextLine();
+                        if (tamanhoPeloAnimal3.equalsIgnoreCase("curto")) {
+                            System.out.println("O custo total do banho será de 30 reais");
+                        } else if (tamanhoPeloAnimal3.equalsIgnoreCase("médio")) {
+                            System.out.println("O custo total do banho será de 40 reias");
+
+                        } else {
+                            System.out.println("O custo total do banho será de 50 reias");
+                        }
+                        break;
+                    }
+
+                case 3:
+                    System.out.println("Qual é o tamanho do seu animal? ");
+                    String tamanhoAnimal3 = sc.nextLine();
+                    if (tamanhoAnimal3.equalsIgnoreCase("g")) {
+                        System.out.println("Qual o tamanho do pelo do seu animal? ");
+                        String tamanhoPeloAnimal3 = sc.nextLine();
+                        if (tamanhoPeloAnimal3.equalsIgnoreCase("curto")) {
+                            System.out.println("O custo total do banho será 40 reais");
+                        } else if (tamanhoPeloAnimal3.equalsIgnoreCase("médio")) {
+                            System.out.println("O custo total do banho será de 50 reais");
+                        } else {
+                            System.out.println("O custo total do banho será de 60 reais");
+                        }
+                    } break;
+            }
+
+        }
+        else if(tipoServico == 2){
+            System.out.println("Para seu pet ficar no nosso hotelzinho necessitamos de algumas informações.");
+            System.out.println("Quanto tempo você pretende deixar o seu pet hospedado aqui conosco? ");
+            int tempoNoHotelzinho = sc.nextInt();
+            sc.nextLine();
+            System.out.println("Como você classifica o tamanho do seu animal? ");
+            String tamanhoAnimalzinho = sc.nextLine();
+            if(tempoNoHotelzinho == 1 && tamanhoAnimalzinho.equalsIgnoreCase("p") ){
+                System.out.println("O valor para a hospedagem do seu pet fica de R$ 12,00");
+            } else if (tempoNoHotelzinho == 1 && tamanhoAnimalzinho.equalsIgnoreCase("m")) {
+                System.out.println("O valor para a hospedagem do seu pet fica de R$ 18,00 ");
+
+            } else{
+                System.out.println("O valor para a hospedagem do seu pet fica de R$ 25,00");
+            }
+
+        }
+
+        else{
+            System.out.println("Informe o tamanho do seu animal: ");
+            String tamanhoPet = sc.nextLine();
+            if(tamanhoPet.equalsIgnoreCase("p")){
+                System.out.println("O valor da tosa fica R$22,00");
+            } else if(tamanhoPet.equalsIgnoreCase("m")){
+                System.out.println("O valor da tosa fica R$30,00");
+            } else{
+                System.out.println("O valor da tosa fica de R$40,00");
+            }
+        }
+    }
+}
+
